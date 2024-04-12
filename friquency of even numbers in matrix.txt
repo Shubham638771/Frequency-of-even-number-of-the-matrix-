@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main(){
+    int m,n,k=0;
+
+    printf("enter the number the matrix:");
+    scanf("%d",&m);
+
+    printf("enter the number of the matrix:");
+    scanf("%d",&n);
+
+    int i,j,a[m][n];
+
+    printf("enter the matrix:");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf(" the matrix is:\n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            int h=a[i][j]%2;
+            printf("%d",h);
+            if(h==0){
+             k++;   
+            }
+        }
+    }
+    printf("\n friquency of even:%d",k);
+            return 0;
+}
+        
